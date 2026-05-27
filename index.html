@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>동신중학교 학생생활규정 주요 안내</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR','Apple SD Gothic Neo',sans-serif;
+  color:#1a1a1a;
+  line-height:1.9;
+  font-size:18px;
+  background:#f2f2f0;
+  -webkit-text-size-adjust:100%;
+}
+a{color:inherit;text-decoration:none}
+
+/* 상단 고정 헤더 */
+.sticky-header{position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.top-bar{background:#fff;padding:16px 18px;border-bottom:1px solid #e5e5e5}
+.school-name{font-size:14px;color:#999;margin-bottom:2px}
+.doc-title{font-size:21px;font-weight:700;color:#111}
+.effective{font-size:13px;color:#bbb;margin-top:3px}
+
+/* 탭 — 가로 스크롤 한 줄 */
+.jump-nav{
+  display:flex;
+  flex-wrap:nowrap;
+  gap:9px;
+  padding:12px 16px;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.jump-nav::-webkit-scrollbar{display:none}
+.jump-btn{
+  flex-shrink:0;
+  font-size:15px;
+  font-weight:500;
+  padding:9px 18px;
+  border-radius:24px;
+  border:1.5px solid #ddd;
+  background:#fff;
+  color:#444;
+  white-space:nowrap;
+  min-height:42px;
+  display:inline-flex;
+  align-items:center;
+}
+.jump-btn:active{background:#f0f0f0}
+
+/* 섹션 */
+.content{padding:0 0 70px;max-width:600px;margin:0 auto}
+.section{padding:28px 16px 8px}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:12px;border-bottom:3px solid #ddd}
+.section-header.blue{border-color:#378ADD}
+.section-header.teal{border-color:#1D9E75}
+.section-header.amber{border-color:#EF9F27}
+.section-header.coral{border-color:#D85A30}
+.section-header.purple{border-color:#7F77DD}
+.section-header.red{border-color:#E24B4A}
+.section-header.green{border-color:#639922}
+.section-header.pink{border-color:#D4537E}
+.section-header.confirm{border-color:#1D9E75}
+.sec-icon{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.sec-icon.blue{background:#E6F1FB}
+.sec-icon.teal{background:#E1F5EE}
+.sec-icon.amber{background:#FAEEDA}
+.sec-icon.coral{background:#FAECE7}
+.sec-icon.purple{background:#EEEDFE}
+.sec-icon.red{background:#FCEBEB}
+.sec-icon.green{background:#EAF3DE}
+.sec-icon.pink{background:#FBEAF0}
+.sec-icon.confirm{background:#E1F5EE}
+.section-title{font-size:20px;font-weight:700}
+
+/* 카드 */
+.card{background:#fff;border:1px solid #e5e5e5;border-radius:18px;padding:20px 18px;margin-bottom:14px}
+.card-title{font-size:13px;font-weight:700;color:#999;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.7px}
+
+/* 권리 항목 */
+.right-item{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid #f0f0f0}
+.right-item:last-child{border-bottom:none;padding-bottom:0}
+.ri-icon{font-size:20px;margin-top:2px;flex-shrink:0}
+.right-text{font-size:17px;font-weight:700;line-height:1.5}
+.right-sub{font-size:15px;color:#777;margin-top:5px;line-height:1.75}
+
+/* 규칙 행 */
+.rule-row{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid #f0f0f0;font-size:17px;gap:14px}
+.rule-row:last-child{border-bottom:none;padding-bottom:0}
+.rule-label{color:#888;flex-shrink:0;font-size:16px}
+.rule-value{text-align:right;font-weight:700;line-height:1.6}
+
+/* 휴대폰 표 → 카드형 */
+.phone-table{width:100%;border-collapse:collapse}
+.phone-table thead{display:none}
+.phone-table tr{display:block;background:#f9f9f9;border:1px solid #eee;border-radius:14px;padding:16px 18px;margin-bottom:12px}
+.phone-table tr:last-child{margin-bottom:0}
+.phone-table td{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border:none;font-size:16px}
+.phone-table td:first-child{font-size:14px;color:#888;border-bottom:1px solid #ebebeb;padding-bottom:12px;margin-bottom:4px}
+
+/* 배지 */
+.badge{display:inline-block;padding:5px 14px;border-radius:7px;font-size:14px;font-weight:700}
+.b1{background:#E1F5EE;color:#0F6E56}
+.b2{background:#FAEEDA;color:#854F0B}
+.b3{background:#FAECE7;color:#993C1D}
+.b4{background:#FCEBEB;color:#A32D2D}
+
+/* 알림 박스 */
+.warn-box{background:#FFFBF0;border:1.5px solid #F5D87A;border-radius:14px;padding:16px 18px;font-size:16px;color:#7A5C00;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start;line-height:1.75}
+.info-box{background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:16px 18px;font-size:16px;color:#1E40AF;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start;line-height:1.75}
+.success-box{background:#F0FDF4;border:1.5px solid #86EFAC;border-radius:14px;padding:16px 18px;font-size:16px;color:#166534;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start;line-height:1.75}
+.danger-box{background:#FFF5F5;border:1.5px solid #FCA5A5;border-radius:14px;padding:16px 18px;font-size:16px;color:#991B1B;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start;line-height:1.75}
+.box-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+
+/* 징계 단계 */
+.discipline-step{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #f0f0f0}
+.discipline-step:last-child{border-bottom:none}
+.ds-num{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0}
+.ds1{background:#E1F5EE;color:#0F6E56}
+.ds2{background:#FAEEDA;color:#854F0B}
+.ds3{background:#FAECE7;color:#993C1D}
+.ds4{background:#FCEBEB;color:#A32D2D}
+.ds-title{font-size:17px;font-weight:700;margin-bottom:4px}
+.ds-desc{font-size:15px;color:#888;line-height:1.7}
+
+/* 2열 그리드 → 1열 */
+.grid-2{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.mini-card{background:#f8f8f8;border-radius:14px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
+.mini-title{font-size:15px;color:#888}
+.mini-value{font-size:18px;font-weight:700;color:#185FA5}
+
+/* 금지 물품 */
+.prohibited-list{list-style:none}
+.prohibited-list li{padding:13px 0;border-bottom:1px solid #f0f0f0;display:flex;align-items:flex-start;gap:12px;font-size:17px;line-height:1.65}
+.prohibited-list li:last-child{border-bottom:none}
+.px-icon{color:#E24B4A;margin-top:3px;font-size:15px;font-weight:700;flex-shrink:0}
+.tag{display:inline-block;padding:3px 9px;border-radius:5px;font-size:13px;margin-left:5px;font-weight:600}
+.td{background:#FCEBEB;color:#A32D2D}
+.tw{background:#FAEEDA;color:#854F0B}
+
+/* 공지 바 */
+.notice-bar{background:#f0f7ff;border-left:4px solid #378ADD;border-radius:0 12px 12px 0;padding:15px 18px;margin-bottom:14px;font-size:16px;color:#1a3a5c;line-height:1.75}
+
+/* 이의제기 */
+.appeal-step{background:#f8f8f8;border-radius:14px;padding:17px 18px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}
+.ap-num{background:#fff;border:1.5px solid #ddd;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;color:#444}
+.ap-title{font-size:17px;font-weight:700;margin-bottom:4px}
+.ap-desc{font-size:15px;color:#888;line-height:1.7}
+
+/* 누적 위반 카드 */
+.cumulative-card{border:2px solid #EF9F27;border-radius:18px;overflow:hidden;margin-bottom:14px}
+.cum-header{background:#FFFBF0;padding:15px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #F5D87A}
+.cum-header-icon{font-size:22px}
+.cum-header-text{font-size:16px;font-weight:700;color:#854F0B}
+.cum-header-sub{font-size:13px;color:#B07800;margin-top:2px}
+.new-badge{display:inline-block;background:#EF9F27;color:#fff;font-size:12px;font-weight:700;padding:2px 8px;border-radius:5px;margin-left:7px;vertical-align:middle}
+.cum-body{padding:20px 18px;background:#fff}
+.cum-count-row{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.cum-count-box{text-align:center;background:#f8f8f8;border-radius:12px;padding:16px;flex:1}
+.cum-num{font-size:38px;font-weight:800;color:#854F0B;line-height:1}
+.cum-label{font-size:13px;color:#999;margin-top:5px}
+.cum-arrow{font-size:24px;color:#ccc;flex-shrink:0}
+.cum-result{text-align:center;background:#FFFBF0;border-radius:12px;padding:16px;flex:1.4}
+.cum-result-text{font-size:15px;font-weight:700;color:#854F0B;line-height:1.65}
+.cum-detail-row{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid #f0f0f0;font-size:16px;line-height:1.75}
+.cum-detail-row:last-child{border-bottom:none;padding-bottom:0}
+.cum-di{font-size:17px;margin-top:2px;flex-shrink:0}
+
+/* 확인 폼 */
+.confirm-card{background:#fff;border:2px solid #1D9E75;border-radius:18px;padding:24px 18px;margin-bottom:14px}
+.confirm-desc{font-size:17px;color:#444;margin-bottom:24px;line-height:1.85}
+.form-field{margin-bottom:20px}
+.form-label{font-size:15px;font-weight:700;color:#444;display:block;margin-bottom:8px}
+.form-hint{font-size:14px;color:#bbb;margin-left:6px;font-weight:400}
+.form-input{
+  width:100%;
+  padding:16px 18px;
+  border:1.5px solid #ddd;
+  border-radius:14px;
+  font-size:17px;
+  font-family:inherit;
+  color:#111;
+  background:#fff;
+  outline:none;
+  -webkit-appearance:none;
+  line-height:1.5;
+}
+.form-input:focus{border-color:#1D9E75;box-shadow:0 0 0 3px rgba(29,158,117,0.15)}
+.form-input::placeholder{color:#ccc}
+.submit-btn{
+  width:100%;
+  padding:18px;
+  background:#1D9E75;
+  color:#fff;
+  border:none;
+  border-radius:14px;
+  font-size:18px;
+  font-weight:700;
+  font-family:inherit;
+  cursor:pointer;
+  margin-top:8px;
+  -webkit-appearance:none;
+  line-height:1.5;
+}
+.submit-btn:active{background:#178a65}
+.submit-btn:disabled{background:#9ecebb;cursor:not-allowed}
+.error-msg{font-size:14px;color:#dc2626;margin-top:7px;display:none}
+
+/* 제출 완료 */
+.success-screen{display:none;text-align:center;padding:28px 0 12px}
+.success-screen .check-circle{width:80px;height:80px;background:#E1F5EE;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:38px;margin:0 auto 18px}
+.success-screen .success-title{font-size:22px;font-weight:700;color:#0F6E56;margin-bottom:8px}
+.success-screen .success-sub{font-size:16px;color:#888;line-height:1.8}
+.success-screen .success-info{display:inline-block;background:#f0fdf4;border:1.5px solid #86efac;border-radius:12px;padding:12px 24px;font-size:17px;color:#166534;font-weight:700;margin-top:16px}
+
+footer{padding:30px 18px;text-align:center;font-size:14px;color:#bbb;border-top:1px solid #eee;margin-top:12px;line-height:1.9}
+</style>
+</head>
+<body>
+
+<div class="sticky-header"><div class="top-bar">
+  <div class="school-name">동신중학교</div>
+  <div class="doc-title">학생생활규정 주요 안내</div>
+  <div class="effective">2026년 7월 1일 시행</div>
+</div>
+
+<nav class="jump-nav" aria-label="빠른 이동">
+  <a class="jump-btn" href="#rights">내 권리</a>
+  <a class="jump-btn" href="#rules">기본 규칙</a>
+  <a class="jump-btn" href="#dress">복장·두발</a>
+  <a class="jump-btn" href="#phone">휴대폰</a>
+  <a class="jump-btn" href="#prohibited">금지 물품</a>
+  <a class="jump-btn" href="#discipline">징계 제도</a>
+  <a class="jump-btn" href="#violence">학교폭력</a>
+  <a class="jump-btn" href="#appeal">이의제기</a>
+  <a class="jump-btn" href="#confirm">확인 서명</a>
+</nav></div>
+
+<div class="content">
+
+<!-- 권리 -->
+<div class="section" id="rights">
+  <div class="section-header blue">
+    <div class="sec-icon blue">🛡️</div>
+    <div class="section-title">내 권리</div>
+  </div>
+  <div class="info-box"><span class="box-icon">ℹ️</span><span>학생의 인권은 교육 목적상 필요한 최소 범위에서만 제한되며, 본질적 내용은 침해될 수 없습니다.</span></div>
+  <div class="card">
+    <div class="right-item"><span class="ri-icon">⚖️</span><div><div class="right-text">차별받지 않을 권리</div><div class="right-sub">성별, 종교, 나이, 장애, 성적 지향, 성별 정체성, 성적, 임신·출산 등을 이유로 차별받지 않습니다.</div></div></div>
+    <div class="right-item"><span class="ri-icon">📖</span><div><div class="right-text">학습권</div><div class="right-sub">소질과 적성에 맞는 학습을 받을 권리가 있습니다. 임신·출산·이성교제를 이유로 학습권을 과도하게 침해하는 징계는 불가합니다.</div></div></div>
+    <div class="right-item"><span class="ri-icon">✂️</span><div><div class="right-text">용모 자율 결정권</div><div class="right-sub">악세사리·화장을 제외한 두발, 교복 등 용모에 관해 스스로 결정할 수 있습니다.</div></div></div>
+    <div class="right-item"><span class="ri-icon">☕</span><div><div class="right-text">휴식권</div><div class="right-sub">교원은 학생의 의사에 반해 정규 교육과정 외 활동을 강제해 휴식권을 침해할 수 없습니다.</div></div></div>
+    <div class="right-item"><span class="ri-icon">💬</span><div><div class="right-text">자치 및 참여 권리</div><div class="right-sub">학교 규정을 새로 만들거나 바꿀 때 학생 의견을 반드시 수렴합니다. 전체 학생 의견 50% 이상 반영을 목표로 합니다.</div></div></div>
+    <div class="right-item"><span class="ri-icon">🔔</span><div><div class="right-text">징계 절차에서의 권리</div><div class="right-sub">사전 통보, 소명 기회, 재심 청구권이 보장됩니다. 양심에 반하는 반성문·서약을 강요받지 않습니다.</div></div></div>
+  </div>
+</div>
+
+<!-- 기본 규칙 -->
+<div class="section" id="rules">
+  <div class="section-header teal">
+    <div class="sec-icon teal">✅</div>
+    <div class="section-title">기본 학교 생활 규칙</div>
+  </div>
+  <div class="card">
+    <div class="card-title">등교 및 결석</div>
+    <div class="rule-row"><span class="rule-label">등교 시간</span><span class="rule-value">오전 8시 30분까지</span></div>
+    <div class="rule-row"><span class="rule-label">결석 시</span><span class="rule-value">사전에 담임교사 통보 필수</span></div>
+    <div class="rule-row"><span class="rule-label">질병·인정 결석</span><span class="rule-value">결석신고서 + 증빙서류 제출</span></div>
+  </div>
+  <div class="card">
+    <div class="card-title">교내 생활</div>
+    <div class="rule-row"><span class="rule-label">외부 음식 반입</span><span class="rule-value">원칙적 금지 (행사 제외)</span></div>
+    <div class="rule-row"><span class="rule-label">수업 중 외출</span><span class="rule-value">교사 허락 + 외출증 필수</span></div>
+    <div class="rule-row"><span class="rule-label">특별실 사용</span><span class="rule-value">담임·지도교사 허락 필요</span></div>
+    <div class="rule-row"><span class="rule-label">복도 통행</span><span class="rule-value">우측통행, 정숙 보행</span></div>
+    <div class="rule-row"><span class="rule-label">음주·흡연·약물</span><span class="rule-value">교내외 전면 금지</span></div>
+    <div class="rule-row"><span class="rule-label">엘리베이터 탑승</span><span class="rule-value">원칙적 금지<br><span style="font-size:12px;color:#888;font-weight:400">단, 환자의 경우 보건교사 승인 하에 탑승 가능</span></span></div>
+  </div>
+  <div class="card">
+    <div class="card-title">교외 생활</div>
+    <div class="rule-row"><span class="rule-label">청소년 유해업소</span><span class="rule-value">출입 및 취업 금지</span></div>
+    <div class="rule-row"><span class="rule-label">오토바이</span><span class="rule-value">탑승 금지</span></div>
+    <div class="rule-row"><span class="rule-label">대외 행사 참가</span><span class="rule-value">학교장 사전 승인 필요</span></div>
+  </div>
+</div>
+
+<!-- 복장·두발 -->
+<div class="section" id="dress">
+  <div class="section-header amber">
+    <div class="sec-icon amber">👔</div>
+    <div class="section-title">복장 및 두발 규정</div>
+  </div>
+  <div class="card">
+    <div class="card-title">교복 착용</div>
+    <div class="rule-row"><span class="rule-label">원칙</span><span class="rule-value">학교 지정 교복 착용 필수</span></div>
+    <div class="rule-row"><span class="rule-label">동복 구성</span><span class="rule-value">후드집업, 티셔츠, 하의</span></div>
+    <div class="rule-row"><span class="rule-label">하복 구성</span><span class="rule-value">하복 셔츠, 하복 하의</span></div>
+    <div class="rule-row"><span class="rule-label">여학생 치마</span><span class="rule-value">무릎까지, 허리 접기·줄이기 금지</span></div>
+    <div class="rule-row"><span class="rule-label">남학생 바지</span><span class="rule-value">접거나 줄이기 금지</span></div>
+  </div>
+  <div class="card">
+    <div class="card-title">외투 및 신발</div>
+    <div class="rule-row"><span class="rule-label">일반 외투(패딩)</span><span class="rule-value">교복 위에 착용, 실내 탈의 원칙</span></div>
+    
+    <div class="rule-row"><span class="rule-label">크록스</span><span class="rule-value">장마철 허용 (스트랩 고정 필수)</span></div>
+  </div>
+  <div class="card">
+    <div class="card-title">두발 및 명찰</div>
+    <div class="warn-box" style="margin-bottom:10px"><span class="box-icon">⚠️</span><span>파마(심한 펌 포함)·염색·탈색은 허용되지 않습니다. 악세사리·화장과 동일한 규정 위반으로 처리됩니다.</span></div>
+    <div class="rule-row"><span class="rule-label">두발</span><span class="rule-value">중학생 신분에 맞게 단정하게</span></div>
+    <div class="rule-row"><span class="rule-label">명찰</span><span class="rule-value">상의 왼쪽 가슴에 패용</span></div>
+    <div class="rule-row"><span class="rule-label">교표·단추</span><span class="rule-value">교복에 부착</span></div>
+  </div>
+</div>
+
+<!-- 휴대폰 -->
+<div class="section" id="phone">
+  <div class="section-header purple">
+    <div class="sec-icon purple">📱</div>
+    <div class="section-title">휴대폰 규정</div>
+  </div>
+  <div class="info-box"><span class="box-icon">ℹ️</span><span>수업 중 휴대폰 사용은 원칙적으로 금지입니다. 교사가 허용한 교육 목적 사용은 예외입니다.</span></div>
+  <div class="card">
+    <div class="card-title">적발 횟수별 조치 (별표 기준)</div>
+    <table class="phone-table">
+      <thead><tr><th>적발 횟수</th><th>조치 내용</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge b1">1회</span></td><td>경고 및 계도</td></tr>
+        <tr><td><span class="badge b2">2회</span></td><td>3일간 압수</td></tr>
+        <tr><td><span class="badge b3">3회</span></td><td>7일간 압수</td></tr>
+        <tr><td><span class="badge b4">4회</span></td><td>14일간 압수<br><span style="font-size:11px;color:#999">10일 후 학부모 직접 내교 시 반환</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="warn-box"><span class="box-icon">⚠️</span><span>시험(고사) 시간 중 휴대폰·전자기기를 소지하면 별도 징계 대상입니다.</span></div>
+</div>
+
+<!-- 금지 물품 -->
+<div class="section" id="prohibited">
+  <div class="section-header red">
+    <div class="sec-icon red">🚫</div>
+    <div class="section-title">소지·사용 금지 물품</div>
+  </div>
+  <div class="card">
+    <ul class="prohibited-list">
+      <li><span class="px-icon">✕</span>라이터, 성냥, 폭죽, 드라이기, 고데기 등 인화물질·전열기</li>
+      <li><span class="px-icon">✕</span>흉기, 칼, 쇠파이프, 공구류 등 위험 물품</li>
+      <li><span class="px-icon">✕</span>레이저빔 기기 <span class="tag td">실명 위험</span></li>
+      <li><span class="px-icon">✕</span>담배(전자담배 포함), 주류, 마약류 <span class="tag td">법령 금지</span></li>
+      <li><span class="px-icon">✕</span>부탄가스, 본드 등 환각물질</li>
+      <li><span class="px-icon">✕</span>음란물·불법 영상물 관련 자료·물품</li>
+      <li><span class="px-icon">✕</span>도박 관련 물품</li>
+      <li><span class="px-icon">✕</span>전동킥보드(PM), 차량·오토바이 등 교내 운행 <span class="tag tw">교내 금지</span></li>
+    </ul>
+  </div>
+  <div class="notice-bar">압수된 물품은 분리기간 후 반환됩니다. 단, 담배·주류·마약 등은 보호자 동의 하에 폐기될 수 있습니다.</div>
+</div>
+
+<!-- 징계 제도 -->
+<div class="section" id="discipline">
+  <div class="section-header coral">
+    <div class="sec-icon coral">⚖️</div>
+    <div class="section-title">징계 제도</div>
+  </div>
+  <div class="success-box"><span class="box-icon">✅</span><span>중학교는 의무교육이므로 <strong>퇴학 처분이 없습니다.</strong></span></div>
+  <div class="cumulative-card">
+    <div class="cum-header">
+      <span class="cum-header-icon">⚠️</span>
+      <div>
+        <div class="cum-header-text">누적 위반에 따른 생활교육위원회 회부 <span class="new-badge">신설</span></div>
+        <div class="cum-header-sub">당해 학년도 기준 적용</div>
+      </div>
+    </div>
+    <div class="cum-body">
+      <div class="cum-count-row">
+        <div class="cum-count-box"><div class="cum-num">6회</div><div class="cum-label">초과 시 (7회 이상)</div></div>
+        <div class="cum-arrow">→</div>
+        <div class="cum-result"><div class="cum-result-text">조항 관계없이<br>생활교육위원회<br>개최될 수 있음</div></div>
+      </div>
+      <div class="cum-detail-row"><span class="cum-di">ℹ️</span><span>위반한 <strong>조항의 종류와 관계없이</strong> 당해 학년도 누적 위반 횟수가 7회 이상이 되면 생활습관 개선 및 교육적 지원을 위해 생활교육위원회가 개최될 수 있습니다.</span></div>
+      <div class="cum-detail-row"><span class="cum-di">🔔</span><span>누적이 <strong>6회에 달하면</strong> 담임교사가 해당 학생과 보호자에게 사전에 고지합니다.</span></div>
+      <div class="cum-detail-row"><span class="cum-di">📋</span><span>위반 횟수 산정·관리는 <strong>생활교육 담당부장</strong>이 담당합니다.</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">징계 종류 (가벼운 순서)</div>
+    <div class="discipline-step"><div class="ds-num ds1">1</div><div><div class="ds-title">학교 내 봉사</div><div class="ds-desc">1일 최대 4시간, 최대 5일 이내 / 수업 수강 후 방과후 실시 원칙</div></div></div>
+    <div class="discipline-step"><div class="ds-num ds2">2</div><div><div class="ds-title">사회봉사</div><div class="ds-desc">1일 최대 5시간, 조치별 5일 이내 / 지역 기관에 위탁 실시 / 이수증 제출 필요</div></div></div>
+    <div class="discipline-step"><div class="ds-num ds3">3</div><div><div class="ds-title">특별교육이수</div><div class="ds-desc">하루 8시간 이내 / 교육감 지정 기관에서 실시 / 이수증 제출 필요</div></div></div>
+    <div class="discipline-step"><div class="ds-num ds4">4</div><div><div class="ds-title">출석정지</div><div class="ds-desc">1회 최대 10일, 연간 최대 30일 / 학생부 미인정결석 처리 (사유 기재 안 함)</div></div></div>
+  </div>
+  <div class="card">
+    <div class="card-title">징계 시 내 권리</div>
+    <div class="right-item"><span class="ri-icon">🔔</span><div><div class="right-text">위원회 개최 3일 전 서면 통지</div><div class="right-sub">징계 이유를 미리 알 권리가 있습니다</div></div></div>
+    <div class="right-item"><span class="ri-icon">🎤</span><div><div class="right-text">위원회에서 직접 진술할 권리</div><div class="right-sub">보호자와 함께 출석하거나 서면으로 의견을 제출할 수 있습니다</div></div></div>
+    <div class="right-item"><span class="ri-icon">✋</span><div><div class="right-text">양심에 반하는 반성문·서약 강요 금지</div><div class="right-sub">진술서 작성 거부를 이유로 추가 불이익을 줄 수 없습니다</div></div></div>
+    <div class="right-item"><span class="ri-icon">📝</span><div><div class="right-text">징계 중에도 시험 응시 가능</div><div class="right-sub">평가 기간은 징계 기간에서 제외됩니다</div></div></div>
+  </div>
+  <div class="grid-2">
+    <div class="mini-card"><div class="mini-title">재심 청구 기한</div><div class="mini-value">조치 후 5일 이내</div></div>
+    <div class="mini-card"><div class="mini-title">학교장 답변 기한</div><div class="mini-value">청구 후 5일 이내</div></div>
+  </div>
+  <div class="info-box"><span class="box-icon">⏸️</span><span>재심 청구를 하면 결과가 나올 때까지 징계 집행이 원칙적으로 정지됩니다.</span></div>
+</div>
+
+<!-- 학교폭력 -->
+<div class="section" id="violence">
+  <div class="section-header green">
+    <div class="sec-icon green">🤝</div>
+    <div class="section-title">학교폭력 대처</div>
+  </div>
+  <div class="danger-box"><span class="box-icon">🚨</span><span>학교폭력을 목격하거나 당했을 때는 <strong>즉시 신고</strong>하세요.</span></div>
+  <div class="card">
+    <div class="card-title">신고 방법</div>
+    <div class="right-item"><span class="ri-icon">👥</span><div><div class="right-text">담임교사 또는 상담교사에게 알리기</div><div class="right-sub">익명 신고도 가능합니다</div></div></div>
+    <div class="right-item"><span class="ri-icon">📞</span><div><div class="right-text">학교폭력 신고 및 상담센터</div><div class="right-sub" style="font-size:16px;font-weight:700;color:#185FA5">117</div></div></div>
+    <div class="right-item"><span class="ri-icon">📞</span><div><div class="right-text">경찰</div><div class="right-sub" style="font-size:16px;font-weight:700;color:#185FA5">112</div></div></div>
+  </div>
+  <div class="notice-bar"><strong>성폭력 사안은 반드시 수사기관에 신고</strong>합니다 (피해자가 원하지 않아도 교사는 신고 의무가 있습니다).</div>
+  <div class="card">
+    <div class="card-title">처리 절차 요약</div>
+    <div class="rule-row" style="font-size:13px"><span class="rule-label">사안 인지</span><span class="rule-value">→ 전담기구 접수·보고</span></div>
+    <div class="rule-row" style="font-size:13px"><span class="rule-label">48시간 이내</span><span class="rule-value">교육지원청 보고</span></div>
+    <div class="rule-row" style="font-size:13px"><span class="rule-label">14일 이내</span><span class="rule-value">자체해결 통지 또는 심의위원회 요청</span></div>
+    <div class="rule-row" style="font-size:13px"><span class="rule-label">피해학생 기록부</span><span class="rule-value">조치 내용 기재하지 않음</span></div>
+  </div>
+</div>
+
+<!-- 이의제기 -->
+<div class="section" id="appeal">
+  <div class="section-header pink">
+    <div class="sec-icon pink">📄</div>
+    <div class="section-title">이의제기 및 재심 방법</div>
+  </div>
+  <div class="card">
+    <div class="card-title">생활교육이 부당하다고 느낄 때</div>
+    <div class="appeal-step"><div class="ap-num">1</div><div><div class="ap-title">7일 이내에 학교장에게 이의 제기</div><div class="ap-desc">서면으로만 이의 제기 가능</div></div></div>
+    <div class="appeal-step"><div class="ap-num">2</div><div><div class="ap-title">학교장이 7일 이내에 답변</div><div class="ap-desc">같은 내용의 반복 이의는 2회까지만 답변 의무</div></div></div>
+  </div>
+  <div class="card">
+    <div class="card-title">징계 결과에 이의가 있을 때</div>
+    <div class="appeal-step"><div class="ap-num">1</div><div><div class="ap-title">조치받은 날부터 5일 이내 서면 재심 청구</div><div class="ap-desc">청구인 이름·주소·연락처, 피청구인, 징계 안 날짜, 청구 이유를 적어 제출</div></div></div>
+    <div class="appeal-step"><div class="ap-num">2</div><div><div class="ap-title">청구 접수 후 징계 집행 원칙적 정지</div><div class="ap-desc">재심 결과가 나올 때까지 기다릴 수 있습니다</div></div></div>
+    <div class="appeal-step"><div class="ap-num">3</div><div><div class="ap-title">학교장이 5일 이내 재심 여부 결정·통보</div><div class="ap-desc">재심 결정 시 7일 이내 위원회 재개최</div></div></div>
+  </div>
+  <div class="info-box"><span class="box-icon">ℹ️</span><span>규정에 대한 의견이나 개정 요청은 학생대의원(전체 1/3 이상 동의)을 통해 발의할 수 있습니다.</span></div>
+</div>
+
+<!-- ✅ 확인 서명 -->
+<div class="section" id="confirm">
+  <div class="section-header confirm">
+    <div class="sec-icon confirm">✍️</div>
+    <div class="section-title">규정 안내 확인</div>
+  </div>
+
+  <div class="confirm-card">
+    <div id="form-area">
+      <p class="confirm-desc">위 학생생활규정 주요 안내를 모두 읽었습니다.<br>학번·이름 입력과 공동체 협약을 작성해 주세요.</p>
+
+      <div class="form-field">
+        <label class="form-label" for="studentId">학번 <span class="form-hint">예: 3115 (3학년 1반 15번)</span></label>
+        <input class="form-input" type="text" id="studentId" placeholder="학번 4자리를 입력하세요" inputmode="numeric" maxlength="4">
+        <div class="error-msg" id="err-id">학번을 입력해 주세요.</div>
+      </div>
+
+      <div class="form-field">
+        <label class="form-label" for="studentName">이름</label>
+        <input class="form-input" type="text" id="studentName" placeholder="이름을 입력하세요" maxlength="10">
+        <div class="error-msg" id="err-name">이름을 입력해 주세요.</div>
+      </div>
+
+
+      <div style="margin:20px 0 16px;border-top:1px solid #e8e8e8;padding-top:18px">
+        <div style="font-size:13px;font-weight:600;color:#0F6E56;background:#E1F5EE;border-radius:8px;padding:9px 13px;margin-bottom:14px">✍️ 공동체 협약 — 내가 바라는 약속 한 줄씩 적어주세요</div>
+
+        <div class="form-field">
+          <label class="form-label" for="wish1">👥 친구들에게 바라는 것</label>
+          <input class="form-input" type="text" id="wish1" placeholder="예: 고운 말 쓰기" maxlength="60">
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="wish2">👨‍👩‍👧 학부모님께 바라는 것</label>
+          <input class="form-input" type="text" id="wish2" placeholder="예: 칭찬 많이 해주기" maxlength="60">
+        </div>
+
+        <div class="form-field" style="margin-bottom:0">
+          <label class="form-label" for="wish3">👩‍🏫 선생님께 바라는 것</label>
+          <input class="form-input" type="text" id="wish3" placeholder="예: 재미있는 수업 하기" maxlength="60">
+        </div>
+      </div>
+            <button class="submit-btn" id="submit-btn" onclick="submitConfirm()">확인 완료 제출하기</button>
+    </div>
+
+    <div class="success-screen" id="success-screen">
+      <div class="check-circle">✅</div>
+      <div class="success-title">제출이 완료되었습니다!</div>
+      <div class="success-sub">학생생활규정 안내 확인이<br>선생님께 전달되었습니다.</div>
+      <div class="success-info" id="success-info"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  동신중학교 학생생활규정 (2026.7.1. 시행) · 학생생활안전체육부<br>
+  본 안내는 규정의 주요 내용을 요약한 것입니다. 세부 내용은 전문을 참고하세요.
+</footer>
+
+<script>
+// ★ 아래 URL을 Apps Script 배포 URL로 교체하세요
+var SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+
+// 페이지 로드 시 이미 제출한 학생이면 바로 완료 화면 표시
+window.addEventListener('load', function() {
+  var saved = localStorage.getItem('ds_규정확인_2026');
+  if (saved) {
+    var data = JSON.parse(saved);
+    showSuccess(data.studentId, data.name, true);
+  }
+});
+
+function submitConfirm() {
+  var studentId = document.getElementById('studentId').value.trim();
+  var name = document.getElementById('studentName').value.trim();
+  var hasError = false;
+
+  document.getElementById('err-id').style.display = 'none';
+  document.getElementById('err-name').style.display = 'none';
+
+  if (!studentId) {
+    document.getElementById('err-id').style.display = 'block';
+    hasError = true;
+  }
+  if (!name) {
+    document.getElementById('err-name').style.display = 'block';
+    hasError = true;
+  }
+  if (hasError) return;
+
+  var btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = '제출 중...';
+
+  var now = new Date().toLocaleString('ko-KR', {timeZone: 'Asia/Seoul'});
+
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({studentId: studentId, name: name, timestamp: now, wish_student: document.getElementById('wish1').value.trim(), wish_parent: document.getElementById('wish2').value.trim(), wish_teacher: document.getElementById('wish3').value.trim()})
+  })
+  .then(function() {
+    localStorage.setItem('ds_규정확인_2026', JSON.stringify({studentId: studentId, name: name}));
+    showSuccess(studentId, name, false);
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = '확인 완료 제출하기';
+    alert('네트워크 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+  });
+}
+
+function showSuccess(studentId, name, alreadyDone) {
+  document.getElementById('form-area').style.display = 'none';
+  var s = document.getElementById('success-screen');
+  s.style.display = 'block';
+  document.getElementById('success-info').textContent = studentId + ' · ' + name;
+  if (alreadyDone) {
+    s.querySelector('.success-sub').textContent = '이미 제출이 완료된 상태입니다.';
+  }
+}
+</script>
+
+</body>
+</html>
