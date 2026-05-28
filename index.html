@@ -513,7 +513,7 @@ footer{padding:30px 18px;text-align:center;font-size:14px;color:#bbb;border-top:
 
 <script>
 // ★ 아래 URL을 Apps Script 배포 URL로 교체하세요
-var SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2BL3myjj9b-Z-LuOWJaNvWJ0ukF94tRDE7gRD2tYvu0R2peM6Bb2DRoSAP4ja0xNnGw/exec';
 
 // 페이지 로드 시 이미 제출한 학생이면 바로 완료 화면 표시
 window.addEventListener('load', function() {
@@ -551,7 +551,7 @@ function submitConfirm() {
   fetch(SCRIPT_URL, {
     method: 'POST',
     mode: 'no-cors',
-    headers: {'Content-Type': 'application/json'},
+    headers: {'Content-Type': 'text/plain;charset=utf-8'},
     body: JSON.stringify({studentId: studentId, name: name, timestamp: now, wish_student: document.getElementById('wish1').value.trim(), wish_parent: document.getElementById('wish2').value.trim(), wish_teacher: document.getElementById('wish3').value.trim()})
   })
   .then(function() {
